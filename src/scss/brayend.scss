@@ -1,0 +1,103 @@
+// --------------------------------------------------
+// PALETTE
+// --------------------------------------------------
+
+$color-primary: #21eb1f;
+
+//Base Grey Color
+$color-master: #31333a;
+
+// Lighter Grey colors
+$color-master-light:mix($color-master, #fff, 40%);
+$color-master-lighter:mix($color-master, #fff, 20%);
+$color-master-lightest:mix($color-master, #fff, 5%);
+
+// Darker Grey colors
+$color-master-dark:mix($color-master, #000, 45%) ;
+$color-master-darker:mix($color-master, #000, 27%);
+$color-master-darkest:mix($color-master, #000, 18%);
+
+$color-white: #fff;
+$color-black: #000;
+
+
+// --------------------------------------------------
+// FONTS & TYPOGRAPHY
+// --------------------------------------------------
+
+@font-face {
+    font-family: 'Stolzl';
+    src: url('../fonts/stolzl/Stolzl-Bold.woff2') format('woff2'),
+        url('../fonts/stolzl/Stolzl-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Stolzl';
+    src: url('../fonts/stolzl/Stolzl-Regular.woff2') format('woff2'),
+        url('../fonts/stolzl/Stolzl-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$font-dimensione-mobile: 20px;
+$font-dimensione-desktop: 28px;
+
+$logo-dimensione-mobile: 50px;
+$logo-dimensione-desktop: 150px;
+
+// --------------------------------------------------
+// GENERAL
+// --------------------------------------------------
+
+
+html{
+    font-size: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    height: 100%;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: $color-primary;
+    color: $color-white;
+    font-family: "Stolzl", Arial, sans-serif;
+    font-weight: bold;
+    font-size: $font-dimensione-mobile;
+    letter-spacing: 0.01em;
+    -webkit-font-smoothing:antialiased;
+    -webkit-text-size-adjust:100%;
+    -ms-text-size-adjust:100%;
+    -webkit-font-feature-settings: "kern" 1;
+    -moz-font-feature-settings: "kern" 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (min-width: 768px) {
+        font-size: $font-dimensione-desktop;
+    }
+
+}
+
+.container {
+    width: 80vw;
+    @media screen and (min-width: 768px) {
+        width: 60vw;
+    }
+}
+h1{
+    color: $color-master;
+    padding: 0;
+    margin: 0 0 30px 0;
+    font-size: $logo-dimensione-mobile;
+    @media screen and (min-width: 768px) {
+        font-size: $logo-dimensione-desktop;
+    }
+}
+
+.text--primary{color: $color-primary;}
+.text--secondary{color: $color-master;}
+.text--grey{color: $color-master-light;}
